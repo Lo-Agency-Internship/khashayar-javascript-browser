@@ -4,21 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #root{
-            width: 100px;
-            height: 100px;
-            padding: 50px;
-            background-color: red;
-        }
-    </style>
+    <title>Browser JavaScript</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="root"></div>
+    <div id="root">
+        <header class="header">
+            <div id="logo">Brand Logo</div>
+            <div id="nav">
+                <div id="btn-search-group">
+                    <button class="all" onclick="filterBtnClick(this.className)">All</button>
+                    <button class="cake" onclick="filterBtnClick(this.className)">Cakes</button>
+                    <button class="cupcake" onclick="filterBtnClick(this.className)">Cupcakes</button>
+                    <button class="sweet" onclick="filterBtnClick(this.className)">Sweets</button>
+                    <button class="dougnut" onclick="filterBtnClick(this.className)">Dougnuts</button>
+                </div>
+                <div id="serachbar">
+                    <button id="searchbar-btn" onclick="searchBarClick()">
+                        <svg id="svg-btn" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px;width: 16px;stroke: currentcolor;stroke-width: 4;overflow: visible;"><g fill="none"><path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path></g></svg>
+                </button>
+                    <input type="text" name="" placeholder="item..." id="searchbar-input">
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id="items">
+                <div class="item sweet">Sweet item</div>
+                <div class="item cupcake">Cupcake item</div>
+                <div class="item cake">Cake item</div>
+                <div class="item dougnut">Dougnut item</div>
+                <div class="item sweet">Sweet item</div>
+                <div class="item cupcake">Cupcake item</div>
+            </div>
+        </main>
+    </div>
 
 
-
-    <script src="hexChange.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
