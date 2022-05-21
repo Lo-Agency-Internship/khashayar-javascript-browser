@@ -1,49 +1,148 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    margin: 0;
-    padding: 0;
+html {
+  margin: 0;
+  padding: 0;
 }
-body{
-    margin: 0;
-    padding: 0;
-}
-
-#root{
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
 }
 
-.hidden{
-    display: none;
+#root {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.header,main{
-    padding: 5rem;
+.hidden {
+  display: none;
 }
 
-#logo{
-    text-align: center;
-
+.header,
+main {
+  padding: 20px;
 }
 
-
-#items{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
+#logo {
+  text-align: center;
 }
 
-.item{
-    min-width: 33%;
-    margin: 1.5rem;
+#searchbar {
+  margin-top: 5px;
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+}
+
+#items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.item {
+  margin: 1.5rem;
+  cursor: pointer;
+  background-color: white;
+}
+.item > img {
+  width: 150px;
+  height: auto;
+}
+
+.item > div {
+  text-align: center;
+  padding: 1rem;
+  background-color: white;
+}
+
+/* modal css */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  position: relative;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: fit-content; /* Could be more or less, depending on screen size */
+}
+.modal-flex {
+  display: flex;
+}
+.modal-head {
+  position: absolute;
+  right: -20px;
+  top: -25px;
+}
+.modal-body {
+  display: flex;
+  align-items: center;
+}
+
+#imgSection {
+  margin: 0 10px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* arrow */
+.arrow {
+  border: solid #aaa;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+}
+.arrow:hover {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  cursor: pointer;
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }

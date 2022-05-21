@@ -1,45 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Browser JavaScript</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div id="root">
-        <header class="header">
-            <div id="logo">Brand Logo</div>
-            <div id="nav">
-                <div id="btn-search-group">
-                    <button class="all" onclick="filterBtnClick(this.className)">All</button>
-                    <button class="cake" onclick="filterBtnClick(this.className)">Cakes</button>
-                    <button class="cupcake" onclick="filterBtnClick(this.className)">Cupcakes</button>
-                    <button class="sweet" onclick="filterBtnClick(this.className)">Sweets</button>
-                    <button class="dougnut" onclick="filterBtnClick(this.className)">Dougnuts</button>
-                </div>
-                <div id="serachbar">
-                    <button id="searchbar-btn" onclick="searchBarClick()">
-                        <svg id="svg-btn" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" style="display: block; fill: none; height: 16px;width: 16px;stroke: currentcolor;stroke-width: 4;overflow: visible;"><g fill="none"><path d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path></g></svg>
-                </button>
-                    <input type="text" name="" placeholder="item..." id="searchbar-input">
-                </div>
+      <header class="header">
+        <div id="logo">Brand Logo</div>
+        <div id="nav">
+          <div id="btn-search-group">
+            <button class="all" onclick="filterBtnClick(this.className)">
+              All
+            </button>
+            <button class="cake" onclick="filterBtnClick(this.className)">
+              Cakes
+            </button>
+            <button class="cupcake" onclick="filterBtnClick(this.className)">
+              Cupcakes
+            </button>
+            <button class="sweet" onclick="filterBtnClick(this.className)">
+              Sweets
+            </button>
+            <button class="dougnut" onclick="filterBtnClick(this.className)">
+              Dougnuts
+            </button>
+          </div>
+          <div id="searchbar">
+            <button id="searchbar-btn" onclick="searchBarClick()">
+              <svg
+                id="svg-btn"
+                viewBox="0 0 32 32"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+                role="presentation"
+                focusable="false"
+                style="
+                  display: block;
+                  fill: none;
+                  height: 16px;
+                  width: 16px;
+                  stroke: currentcolor;
+                  stroke-width: 4;
+                  overflow: visible;
+                "
+              >
+                <g fill="none">
+                  <path
+                    d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+            <input
+              type="text"
+              name=""
+              placeholder="item..."
+              id="searchbar-input"
+            />
+          </div>
+        </div>
+      </header>
+      <main>
+        <div id="items">
+          <div class="item sweet" onclick="modal(0)">
+            <img src="./images/sweet.jfif" alt="sweet image" />
+            <div>Sweet item</div>
+          </div>
+          <div class="item cupcake" onclick="modal(1)">
+            <img src="./images/cupcake.jfif" alt="cupcake image" />
+            <div>Cupcake item</div>
+          </div>
+          <div class="item cake" onclick="modal(2)">
+            <img src="./images/cake.jfif" alt="cake image" />
+            <div>Cake item</div>
+          </div>
+          <div class="item dougnut" onclick="modal(3)">
+            <img src="./images/doughnut.jfif" alt="dougnut image" />
+            <div>Dougnut item</div>
+          </div>
+          <div class="item sweet" onclick="modal(4)">
+            <img src="./images/sweet2.jfif" alt="sweet image" />
+            <div>Sweet item</div>
+          </div>
+          <div class="item cupcake" onclick="modal(5)">
+            <img src="./images/cupcake2.jfif" alt="cupcake image" />
+            <div>Cupcake item</div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-head">
+              <span class="close">&times;</span>
             </div>
-        </header>
-        <main>
-            <div id="items">
-                <div class="item sweet">Sweet item</div>
-                <div class="item cupcake">Cupcake item</div>
-                <div class="item cake">Cake item</div>
-                <div class="item dougnut">Dougnut item</div>
-                <div class="item sweet">Sweet item</div>
-                <div class="item cupcake">Cupcake item</div>
+            <div class="modal-body">
+              <p id="leftP"><i class="arrow left"></i></p>
+              <p id="imgSection"></p>
+              <p id="rightP"><i class="arrow right"></i></p>
             </div>
-        </main>
+          </div>
+        </div>
+      </main>
     </div>
 
-
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
